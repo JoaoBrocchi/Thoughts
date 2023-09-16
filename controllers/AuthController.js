@@ -24,9 +24,9 @@ module.exports = class AuthController{
         if (match){
             try {
                 req.session.userid  = currentUser.id
-                req.flash("message", "Logado com sucesso")
-                console.log(req.session.userid,"salve")
+                req.flash("message", "Só boa logado fiiwk")
                 req.session.save(()=>{
+                    
                     return res.redirect("/")
                 })
                 
@@ -39,7 +39,7 @@ module.exports = class AuthController{
             req.flash("message", "A senha esta errada")
             res.render("auth/login")
         }
-        res.redirect("/")
+        
     }
     static Register(req,res){
         res.render("auth/register")
@@ -74,7 +74,6 @@ module.exports = class AuthController{
             req.flash("message", "Cadastro Realizaod com sucesso!")
             
             req.session.save(()=>{
-
                 return res.redirect("/")
             })
             
@@ -83,7 +82,7 @@ module.exports = class AuthController{
             console.log(err)
         }
     }
-    static logout() {
+    static logout(req,res) {
         req.session.destroy()
         res.redirect("/login")
     }

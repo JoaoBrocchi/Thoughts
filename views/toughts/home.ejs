@@ -1,9 +1,48 @@
 <%- include('../layouts/header.ejs') %>
 
+<% if(search) {  %>
+   <h1>Você esta buscando por : <span><%=search%></span></h1>
+   <% if(quantidade) {  %>
+      <p>Foram encontradros : <span><%=quantidade%></span></p>
+   <%  }else {%>
+      <p>Nenhum pensamento foi encotrado com seguinte argumento: <span><%=search%></span></p>
+   <% }%>
+<%  }else {%>
+   <h1>Conheça alguns dos nossos <span>pensamentos:</span></h1>
 
-
+<% }%>
  <div class="container">
-    <h1>Todos os pensamentos</h1>
+    <div class="home-header">
+         <form action="/" method="get" >
+            <input type="text" name="search"  placeholder="buscando por algo ?">
+            <input type="submit" class="btn"  value="Buscar">
+         </form>
+         <div class="order-container">
+            <span>Ordenar Por:</span>
+            <form action="/" method="get">
+               <input type="hidden" name="search" value="<%=search%>">
+               <input type="hidden" class="btn"  name="order" value="new">
+               <button type="submit" ><i class="bi bi-arrow-up"></i></button>
+            </form>
+            <form action="/" method="get">
+               <input type="hidden" name="search" value="<%=search%>">
+               <input type="hidden" class="btn"  name="order" value="old">
+               <button type="submit" ><i class="bi bi-arrow-down"></i></button>
+            </form>
+            <a href="/">Limpar</a>
+         </div>
+    </div>
+
+    <div class="thoughts-container">
+      <% thoughts.forEach((tought)=>{ %>
+         <figure>
+            <blockquote>
+               "<%=tought.title%>"
+            </blockquote>
+            <figcaption>Por : <%=tought.User.name%></figcaption>
+         </figure>
+      <% }) %>
+    </div>
  </div>
 
 

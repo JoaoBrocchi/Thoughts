@@ -45,7 +45,7 @@ app.use(flash());
 // set session to res
 app.use((req, res, next) => {
   // console.log(req.session)
-  console.log(req.session.userid);
+  
 
   if (req.session.userid) {
     res.locals.session = req.session;
@@ -57,7 +57,7 @@ app.use((req, res, next) => {
 
 
 
-app.use("/toughts", toughtsRouter)
+app.use("/thoughts", toughtsRouter)
 app.get("/",toughtsRouter)
 app.use("/", authRouter)
 

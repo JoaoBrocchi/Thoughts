@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 const dotenv = require("dotenv").config()
 
-const sequelize = new Sequelize(process.env.DATABASE,"root","1234",{host: "localhost", dialect : "mysql"})
+const sequelize = new Sequelize(process.env.DATABASE,process.env.USER,process.env.PASSWORD,{host: process.env.HOST, dialect : "mysql"})
 try {
         sequelize.authenticate()
         console.log("conectado com sucesso ao banco")

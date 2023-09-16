@@ -1,0 +1,23 @@
+<%- include('../layouts/header.ejs') %>
+
+
+
+ <div class="container">
+    <div class="tought-form-conatiner">
+        <a href="/dashboard">Voltar</a>
+        <h1>Criar Pensamento</h1>
+        <form action="/thoughts/add" method="post" >
+            <div class="form-control">
+                <label for="title">Pensamento :</label>
+                <input type="text" name="title" placeholder="digite o seu Pensamento">
+            </div>
+            <input type="submit" value="Criar Pensamento">
+        </form>
+    </div>
+ </div>
+
+
+
+
+
+<%- include('../layouts/footer'); %>.

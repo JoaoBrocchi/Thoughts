@@ -1,0 +1,34 @@
+<%- include('../layouts/header.ejs') %>
+
+
+
+ <div class="caixa">
+    <div class="dashboard">
+        <div class="title-container">
+            <h2>dashboard</h2>
+            <a href="/thoughts/add" class="btn">Criar pensamentos</a>
+        </div>
+    
+        <h3>Seus Pensametos</h3> 
+        <ul>
+            
+            <% thoughts.forEach((tought)=>{ %>
+                <span class="labels"><%=tought.title%></span>
+                <li>
+                    
+                    <form action="/thoughts/remove" method="post">
+                        <a class="btn" href="/thoughts/edit/<%=tought.id%>">Edit</a>
+                        <input type="hidden" name="id" value="<%=tought.id%>">
+                        <input type="submit" class="btn" value="Excluir">
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+    </div> 
+ </div>
+
+
+
+
+
+<%- include('../layouts/footer'); %>.
