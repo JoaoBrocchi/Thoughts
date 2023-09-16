@@ -1,0 +1,137 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #222;
+    color: #fff;
+}
+/*NAVBAR */
+#navbar{
+    padding: 1.2em  1.4em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    border-bottom: 1px solid #f6982D;
+}
+
+#logo img {
+    height: 40px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+#navbar li {
+    margin-left: 1em;
+
+}
+
+#navbar li a {
+    text-decoration: none;
+    transition: 05.s;
+    font-weight: bold;
+}
+
+#navbar li a:hover{
+    color: #f6982D;
+}
+
+/*CONTAINER */
+.container {
+    min-height: 60vh;
+    padding: 2em;
+    
+    
+}
+.message {
+    padding: 1em;
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+    text-align: center;
+    margin: 0 auto 2em;
+    max-width: 60%;
+}
+
+/*REGISTER */
+
+.auth-container {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+.auth-container h2 {
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 4px solid #f6982D;
+    padding: .3em;
+    width: 100px;
+    
+}
+
+.auth-conatiner a {
+    color: #f6982D;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.form-control input,
+.form-control textarea{
+   padding: 7px;
+   border-radius: 3px;
+   border: 1px solid #f6982D;
+}
+
+
+
+form input[type='submit'],
+.btn {
+    background-color: transparent;
+    color: #f6982D;
+    border: 2px solid #f6982D;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .5ms;
+}
+
+form input[type='submit']:hover,
+.btn:hover {
+    background-color: #f6982D;
+    color: #fff;
+}
+
+
+
+/*FOOTER */
+footer {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #f6982D;;
+}
+footer span {
+    font-weight: bold;
+    color: #f6982D;
+}
+
